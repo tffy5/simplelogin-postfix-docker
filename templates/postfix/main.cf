@@ -34,7 +34,8 @@ smtpd_use_tls = no
 alias_maps = hash:/etc/aliases
 
 # Allow containers on the same private network to send emails via Postfix.
-mynetworks_style = subnet
+#mynetworks_style = subnet
+mynetworks = {{ env['MY_NETWROKS'] }}
 
 # Set your domain here
 mydestination =
